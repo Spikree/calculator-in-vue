@@ -5,7 +5,7 @@
     <div @click="sign" class="btn">+/-</div>
     <div @click="percent" class="btn">%</div>
     <div @click="divide" class="btn operator">÷</div>
-    <div @click="append(7)" class="btn">7</div>
+    <div @click="append(7)"  class="btn">7</div>
     <div @click="append(8)"  class="btn">8</div>
     <div @click="append(9)"  class="btn">9</div>
     <div @click="times" class="btn operator">x</div>
@@ -80,8 +80,7 @@
       equal() {
         this.current = `${this.operator(parseFloat(this.current), parseFloat(this.previous))}`;
         this.previous = null;
-      }
-
+      },
     }
   }
 </script>
@@ -118,4 +117,10 @@
   background-color: orange;
   color: white;
 }
+
+.btn:active {
+  background-color: #a9a9a9;
+}
+
+
 </style>
